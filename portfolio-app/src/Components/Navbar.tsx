@@ -1,20 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import {Box} from "@chakra-ui/react";
+import Projects from '../Pages/Projects'
 
 function Navbar(){
     const textColor = "#317874";
 
     return(
-        <Box
-        display={"flex"}
-        w={"100%"}
-        color={textColor}
-        fontWeight="bold"
-        fontSize="3xl"
-        backgroundColor="#E2D2F9"
-        height="70px"
-        justifyContent="flex-end">
+            <Box
+            display={"flex"}
+            w={"100%"}
+            color={textColor}
+            fontWeight="bold"
+            fontSize="3xl"
+            backgroundColor="#E2D2F9"
+            height="70px"
+            justifyContent="flex-end">
+                
+            
             <Box
             display={"flex"}
             className="animate-letters"
@@ -44,7 +48,8 @@ function Navbar(){
                 <Box mr={8}>n</Box>
             </Box>
 
-        </Box>
+            </Box>
+        
     )
 }
 

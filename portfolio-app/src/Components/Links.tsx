@@ -1,12 +1,26 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import {Image, Box} from "@chakra-ui/react"
-import {motion} from 'framer-motion'
+import { Image, Box } from "@chakra-ui/react"
+import { motion } from 'framer-motion'
+import '../App.css'
+
 
 function LinksComponent(){
-    const imgStyles = { width: '100%', height: 'auto', borderRadius: '50%' }
-    const Hover = { scale: 1.1 }
+    const imgStyles = { width: '100%', height: 'auto', borderRadius: '50%' };
+    const textAreaStyles = { backgroundColor: "white", textColor: 'black', height: '20%'};
+    const formMargins = {marginTop: '10x'}
+    const Hover = { scale: 1.1 };
+
     
+    const yourEmail = 'keshia.w196@gmail.com';
+
+  const handleEmailButtonClick = () => {
+    const subject = encodeURIComponent('Subject of the email');
+    const body = encodeURIComponent('Your message goes here.');
+
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&to=${yourEmail}&su=${subject}&body=${body}`;
+
+    window.open(gmailComposeUrl);
+  };
+
 
     return(
         <Box
@@ -37,19 +51,22 @@ function LinksComponent(){
                     style={imgStyles}
                     />
                 </motion.div>
-              </a>
-
-            <a>
-              <motion.div
-              whileHover={Hover}
-              style={{ width: '60px', marginLeft: '20px' }}
-              >
-                <Image
-                  src="./src/assets/gmail-img.PNG"
-                  style={imgStyles}
-                  />
-              </motion.div>
             </a>
+
+            <Box>
+                <motion.div
+                    whileHover={Hover}
+                    style={{ width: '60px', marginLeft: '20px' }}
+                >
+                    <Image
+                    src="./src/assets/gmail-img.PNG"
+                    style={imgStyles}
+                    className="btn-modal"
+                    onClick={handleEmailButtonClick}
+                    />
+                </motion.div>
+
+            </Box>
             
             <a href="https://www.credly.com/users/keshia-wick" target="_blank" >
                 <motion.div
@@ -65,5 +82,6 @@ function LinksComponent(){
           </Box>
     )
 }
+
 
 export default LinksComponent;
