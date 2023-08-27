@@ -5,22 +5,19 @@ import '../App.css'
 
 function LinksComponent(){
     const imgStyles = { width: '100%', height: 'auto', borderRadius: '50%' };
-    const textAreaStyles = { backgroundColor: "white", textColor: 'black', height: '20%'};
-    const formMargins = {marginTop: '10x'}
     const Hover = { scale: 1.1 };
 
     
     const yourEmail = 'keshia.w196@gmail.com';
 
   const handleEmailButtonClick = () => {
-    const subject = encodeURIComponent('Subject of the email');
-    const body = encodeURIComponent('Your message goes here.');
+    const subject = encodeURIComponent('Subject');
+    const body = encodeURIComponent(' ');
 
     const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&to=${yourEmail}&su=${subject}&body=${body}`;
 
     window.open(gmailComposeUrl);
   };
-
 
     return(
         <Box

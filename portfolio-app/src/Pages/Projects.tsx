@@ -1,14 +1,12 @@
-import React from 'react'
-import Navbar from '../Components/Navbar'
-import {Box} from "@chakra-ui/react";
+import React from 'react';
+import { Box } from '@chakra-ui/react';
 
-function ProjectsPage(){
-    return(
-        <Box>
-            <Navbar />
-            <h1>Projects</h1>
-        </Box>
-    )
-}
+const ProjectsPage = () => {
+  return (
+    <Box>
+      <h1>Projects</h1>
+    </Box>
+  );
+};
 
 export default ProjectsPage;

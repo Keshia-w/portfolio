@@ -1,8 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {Box} from "@chakra-ui/react";
-import Projects from '../Pages/Projects'
+// import Projects from '../Pages/Projects'
 
 function Navbar(){
     const textColor = "#317874";
@@ -18,21 +16,23 @@ function Navbar(){
             height="70px"
             justifyContent="flex-end">
                 
+            <Link to='./projects'>
+                <Box
+                display={"flex"}
+                className="animate-letters"
+                mt={2}
+                >
+                    <Box>P</Box>
+                    <Box>r</Box>
+                    <Box>o</Box>
+                    <Box>j</Box>
+                    <Box>e</Box>
+                    <Box>c</Box>
+                    <Box>t</Box>
+                    <Box>s</Box>
+                </Box>
+            </Link>
             
-            <Box
-            display={"flex"}
-            className="animate-letters"
-            mt={2}
-            >
-                <Box>P</Box>
-                <Box>r</Box>
-                <Box>o</Box>
-                <Box>j</Box>
-                <Box>e</Box>
-                <Box>c</Box>
-                <Box>t</Box>
-                <Box>s</Box>
-            </Box>
 
             <Box
             display={"flex"}
@@ -54,3 +54,6 @@ function Navbar(){
 }
 
 export default Navbar;
+
+
+//you were working on routing the projects page
